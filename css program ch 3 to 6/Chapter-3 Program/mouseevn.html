@@ -1,0 +1,41 @@
+<html>
+<head>
+	<h1>Arithmetic Operations Using Mouse Events</h1>
+</head>
+<body>
+	<script type="text/javascript">
+		function add_nums()
+		{
+			var a=parseInt(document.getElementById("t1").value);
+			var b=parseInt(document.getElementById("t2").value);
+			alert("First No.: "+a+"\n Second No.: "+b+"\n Addition is: "+(a+b));
+		}
+		function sub_nums()
+		{
+			var a=parseInt(document.getElementById("t1").value);
+			var b=parseInt(document.getElementById("t2").value);
+			alert("First No.: "+a+"\n Second No.: "+b+"\n Subtraction is: "+(a-b));
+		}
+		function mul_nums()
+		{
+			var a=parseInt(document.getElementById("t1").value);
+			var b=parseInt(document.getElementById("t2").value);
+			alert("First No.: "+a+"\n Second No.: "+b+"\n Multiplication is: "+(a*b));
+		}
+		function div_nums()
+		{
+			var a=parseInt(document.getElementById("t1").value);
+			var b=parseInt(document.getElementById("t2").value);
+			alert("First No.: "+a+"\n Second No.: "+b+"\n Division is: "+(a/b));
+		}
+	</script>
+	<form>
+	First Number    <input type="text" id="t1" name="fno" size= "50"/><br>
+	Second Number   <input type="text" id="t2" name="sno" size= "50"/><br>
+	<input type="button" style="width: 150px; height: 50px;" onmousedown="add_nums()" value="Addition"/>
+	<input type="button" style="width: 150px; height: 50px;" onmouseenter="sub_nums()" value="Subtraction"/>
+	<input type="button" style="width: 150px; height: 50px;" onmouseleave="mul_nums()" value="Multiplication"/>
+	<input type="button" style="width: 150px; height: 50px;" onmousemove="div_nums()" value="Division"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html >
+<head>
+<title>CSS PR ESE</title>
+	<script>
+		Banners = new Array('Banner1.jpg','Banner2.jpg','Banner3.jpg');
+		CurrentBanner = 0;
+		function DisplayBanners() 
+		{
+			if (document.images);
+			{
+				CurrentBanner++;
+				if (CurrentBanner == Banners.length) 
+				{
+					CurrentBanner = 0
+				}
+				document.RotateBanner.src= Banners[CurrentBanner];
+				setTimeout("DisplayBanners()",1000);
+			}
+		}
+	</script>
+</head>
+<body onload="DisplayBanners()" >
+<center>
+	<img src="banner1.jpg" width="400" height="200" name="RotateBanner" />
+</center>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<p>Click the button to global search for a substring that contains a sequence of three to four digits.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "100, 1000 or 10000 or 100?";
+  var patt1 = /\d{3,5}/g; 
+  var result = str.match(patt1);
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

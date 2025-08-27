@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<p>Click the button to return the text of the RegExp pattern.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Visit W3Schools";
+  var patt1 = /W3S/g;
+  var res = "The text of the RegExp is: " + patt1.source;
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Aadhaar Card Validation</title>
+    <script>
+        function validateAadhaar() {
+            var aadhaarInput = document.getElementById('aadhaar').value;
+            var regex = /^\d{4}[-.]\d{4}[-.]\d{4}$/;
+
+            if (regex.test(aadhaarInput)) {
+                alert("Aadhaar Card Number is VALID!");
+            } else {
+                alert("Invalid Aadhaar Card Number. Please enter a valid Aadhaar card number.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+
+    <br>
+
+    <label for="aadhaar">Aadhaar Card Number:</label>
+    <input type="text" id="aadhaar" placeholder="Enter Aadhaar card number">
+
+    <br>
+
+    <button onclick="validateAadhaar()">Validate Aadhaar</button>
+</body>
+</html>

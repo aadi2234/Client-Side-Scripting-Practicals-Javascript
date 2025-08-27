@@ -1,0 +1,29 @@
+<html>
+	<script type="text/javascript">
+		
+			count=0;
+			pics=new Array(`Banner1.jpg`,`Banner2.jpg`,`Banner3.jpg`);
+		function slideshow(status) {
+			if(document.images)
+			{
+				count=count+status;
+				if(count>(pics.length-1))
+				{
+					count=0;
+				}
+				if(count<0)
+				{
+					count=pics.length-1;
+				}
+				document.images.src=pics[count];
+			}
+		}
+	</script>
+<body>
+	<img src="Banner1.jpg" width="800" name="images">
+	<br>
+	<input type="button" value="Next" onclick="slideshow(1)">
+	<br>
+	<input type="button" value="Back" onclick="slideshow(-`	D1)">
+</body>
+</html>

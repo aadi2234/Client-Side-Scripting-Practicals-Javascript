@@ -1,0 +1,102 @@
+
+<style type="text/css">
+ <!--
+
+   /* stylesheet for the tutorials sections */
+
+   body {background-color: #ffffff;
+         margin-left: 1em;
+         margin-right: 1em;
+         font-family: geneva,helvetica,"sans serif";
+         font-size: 11pt;
+         font-weight: 500;
+         line-height: 135%
+        }
+ 
+   /* Code tables - add I-tag for Moz */
+   table.html {background-color: #E0E0E0;
+               font-weight: 500;
+               font-family: geneva,helvetica,"sans serif";
+               font-style: normal;
+               font-size: 10pt;
+               margin-top: 10px;
+               }
+   
+ 
+       /* for Moz's code tables */
+       I {background-color: transparent;
+          font-weight: 500;
+          font-family: geneva,helvetica,"sans serif";
+          font-style: normal;
+          font-size: 10pt;
+         }
+
+   /* Normal tables */
+  table.normal {font-weight: 500;
+               font-family: geneva,helvetica,"sans serif";
+               font-style: normal;
+               font-size: 10pt;
+               margin-top: 10px;
+               }
+    
+   P {font-weight: 500;
+      font-family: geneva,helvetica,"sans serif";
+      font-style: normal;
+      font-size: 11pt;
+      font-variant: normal;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      }
+   
+   /* main headings */
+   h3 {color: #00aaaa;
+       font-weight: 800;
+       font-size: 14pt;
+       font-family: garamond,"times new roman","serif"; 
+      }
+
+  /* subheadings */
+  h4 {font-weight: 700; 
+      font-family: garamond,times,"serif"; 
+      font-style: normal;
+      font-size: 12pt;
+      margin-bottom: 4px;
+      }
+   
+   .heading {font-weight: 700;
+             font-family: garamond,times,"serif";
+             font-style: normal;
+             font-size: 12pt;
+             margin-bottom: 4px;
+             color: #00aaaa;
+             }
+
+   .small {font-family: "times new roman",garamond,"serif";
+           font-size: 10pt;
+          }
+
+
+   /* javascript code */
+   em {background-color: #808080;
+       color: #C0FFFF;
+       font-style: normal;
+       } 
+
+   pre {font-family: geneva,helvetica,"sans serif";}
+
+   dl {margin-left: 2em;
+       margin-right: 2em;}
+
+   B {font-weight: 600;
+      font-style: normal;
+      font-size: 10pt;
+      line-height: normal;
+      }
+
+   .def {color: #805500;}
+
+-->
+</style>
+

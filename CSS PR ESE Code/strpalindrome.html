@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Palindrome</title>
+    <script>
+            var s=parseInt(prompt("Enter a string:-"));
+            let rev="";
+            for(var i=s.length-1;i>=0;i--){
+                rev=rev+s.charAt(i);
+            }
+            alert("Original String="+s);
+            alert("Reversed String="+rev);
+            if(s===rev)
+            {
+                alert("Palindrome String");
+            }
+            else
+            {
+                alert("not Palindrome String");
+            }
+    </script>
+</head>
+</html>
+

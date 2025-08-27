@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Text Demo</title>
+    <style>
+        #scrollingTextContainer {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 200px; /* Set a fixed width for the container */
+        }
+
+        #scrollingText {
+            display: inline-block;
+            animation: scroll 5s linear infinite; /* Adjust the duration and timing function as needed */
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="scrollingTextContainer">
+    <div id="scrollingText">Welcome to Scrolling Text Demo! </div>
+</div>
+
+</body>
+</html>

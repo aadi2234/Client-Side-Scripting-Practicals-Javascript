@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>drop down</title>
+</head>
+<body>
+	<form name="myform" action="" method="post">
+		<b>Select Your Favourite Website:</b>
+		<select id="option" onchange="dropdownmenu()">
+			<option>---Choose City---</option>
+			<option>  Akola  </option>
+			<option>  Pune  </option>
+			<option>  Mumbai  </option>
+			<option>  Dhule  </option>
+			<option>  Jalgaon  </option>
+		</select>
+	</form>
+	<script type="text/javascript">
+		function dropdownmenu()
+		{
+			var list=document.getElementById("option").value;
+			alert("Your selected city is:"+list);
+		}
+	</script>
+</body>
+</html>

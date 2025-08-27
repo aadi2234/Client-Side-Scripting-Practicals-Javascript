@@ -1,0 +1,23 @@
+<html>
+<head><title> PROGRAM TO CHECK VALID PHONE NUMBER</title>
+<script language="javascript">
+
+function telephoneCheck() 
+{
+  str = form1.str.value
+  var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+  if( regex.test(str))
+	alert("valid phone number");
+  else
+	alert("not a valid phone number");
+}
+</script>
+</head>
+<body>
+	PROGRAM TO CHECK VALID PHONE NUMBER
+	<form name="form1">
+	Enter a Phone Number :<input type="text" name="str">
+	<input type="button" value="Check" onclick="telephoneCheck()">
+	</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Concealing Email Address</title>
+<script>
+hide_email=function(eid)
+{
+	var avg, splitted, part1, part2;
+	splitted=eid.split("@");
+	part1=splitted[0];
+	avg=part1.length/2;
+	part1=part1.substring(0,(part1.length-avg));
+	part2=splitted[1];
+	return part1 +".....@"+part2;
+	
+}
+alert(hide_email("pschavan@kkwagh.edu.in"));
+
+</script>
+</head>
+<body>
+<h3>Email Address Protection</h3>
+</body>
+</html>

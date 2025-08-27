@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Pract 3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr= new Array();
+		var mark,i;
+		for(i=1; i<=10;i++)
+		{
+			mark=prompt("Enter marks of "+i+ " Subject");
+			arr.push(mark);
+		}
+		for(i=0; i<10;i++)
+		{
+			arr.sort();
+			document.write("Sorted Subject Marks="+arr[i]+"<br>");
+		}
+	</script>
+</body>
+</html>

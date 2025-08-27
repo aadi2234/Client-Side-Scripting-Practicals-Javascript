@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+    <script>
+        function displayDigitalClock() {
+            // Open a new window
+            var newWindow = window.open('', '', 'width=200,height=100');
+
+            // Function to update the clock
+            function updateClock() {
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+
+                // Format the time with leading zeros
+                hours = (hours < 10) ? '0' + hours : hours;
+                minutes = (minutes < 10) ? '0' + minutes : minutes;
+                seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+                var timeString = hours + ':' + minutes + ':' + seconds;
+
+                // Update the content of the new window
+                newWindow.document.body.innerHTML = '<h1>' + timeString + '</h1>';
+            }
+
+            // Initially display the clock
+            updateClock();
+
+            // Update the clock every second
+            var clockInterval = setInterval(updateClock, 1000);
+
+            // Close the new window when the main window is closed
+            window.onbeforeunload = function () {
+                newWindow.close();
+            };
+        }
+    </script>
+</head>
+<body>
+    <button onclick="displayDigitalClock()">Display Digital Clock</button>
+</body>
+</html>

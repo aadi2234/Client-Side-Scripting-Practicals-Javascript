@@ -1,0 +1,29 @@
+<html>
+<head><title>CSS PR ESE</title></head>
+<body>
+	<script>
+		var students = [["Amit", 70],["Sumit", 78],["Abhishek", 71]];
+		var Avgmarks = 0;
+		for (var i = 0; i < students.length; i++) 
+		{
+			Avgmarks = Avgmarks+students[i][1];
+			for (var j = i + 1; j < students.length; j++) 
+			{
+				if (students[i] > students[j]) 
+				{
+					a = students[i];
+					students[i] = students[j];
+					students[j] = a
+				}
+			}
+		}
+		var avg = Avgmarks / students.length;
+		document.write("Average grade: " + avg);
+		document.write("<br><br>");
+		for (i = 0; i < students.length; ++i)
+		{
+			document.write(students[i]+"<br>")
+		}
+	</script>
+</body>
+</html>

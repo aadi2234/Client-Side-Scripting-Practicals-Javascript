@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stack Operations</title>
+</head>
+<body>
+
+<h1>Stack Operations</h1>
+
+<button onclick="pushToStack()">Push to Stack</button>
+<button onclick="popFromStack()">Pop from Stack</button>
+
+<p>Stack: <span id="stack"></span></p>
+
+<script>
+    // Initialize an empty stack
+    let stack = [];
+
+    // Function to push an element onto the stack
+    function pushToStack() {
+        const item = prompt("Enter an item to push onto the stack:");
+        if (item !== null) {
+            stack.push(item);
+            updateStackDisplay();
+        }
+    }
+
+    // Function to pop an element from the stack
+    function popFromStack() {
+        if (stack.length === 0) {
+            alert("Stack is empty");
+        } else {
+            const poppedItem = stack.pop();
+            alert(`Popped item: ${poppedItem}`);
+            updateStackDisplay();
+        }
+    }
+
+    // Function to update the stack display
+    function updateStackDisplay() {
+        const stackDisplay = document.getElementById("stack");
+        stackDisplay.textContent = stack.join(", ");
+    }
+</script>
+
+</body>
+</html>

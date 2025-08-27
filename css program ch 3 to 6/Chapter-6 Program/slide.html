@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>	
+<script language="Javascript">
+MySlides=new  Array('banner1.jpg','banner2.jpg','banner3.jpg','banner4.jpg')
+Slide=0
+function ShowSlides(SlideNumber)
+{
+{
+Slide=Slide+SlideNumber
+if (Slide>MySlides.length-1)
+{
+Slide=0
+}
+if (Slide<0) {
+Slide=MySlides.length-1
+}
+document.DisplaySlide.src=MySlides[Slide]
+}	}
+
+</script>
+</head>
+<body>
+<div>
+<center>
+<h1> SLIDE SHOW IN JAVASCRIPT</h1>
+<img src="banner1.jpg" name="DisplaySlide" width="500" height="250" /><p>
+<input type="button" value="Back" onclick="ShowSlides(-1)">
+<input type="button" value="Forward" onclick="ShowSlides(1)">
+</div>
+</center>
+</body>
+</html>
+
+
+</html>

@@ -1,0 +1,41 @@
+<!--Write a JavaScript program to check number is Armstrong or not.-->
+<html>
+<head>
+<title>Armstrong or not</title>
+</head>
+<body>
+<script type="text/javascript">
+	let no=parseInt(prompt("Enter a number:"));
+	let t1=no;
+	let leng=0;
+	while(t1!=0)
+	{
+		leng=leng+1;
+		t1=Math.floor(t1/10);
+	}
+	let t2=no;
+	let arm=0;
+	let rem;
+	while(t2!=0)
+	{
+		let mul=1;
+		rem=t2%10;
+		for(var i=1;i<=leng;i++)
+		{
+			mul=mul*rem;
+		}
+		arm=arm+mul;
+		t2=Math.floor(t2/10);
+	}
+	if(arm===no)
+	{
+		alert(no+" is a Armstrong Number");
+	}
+	else
+	{
+		alert(no+" is not a Armstrong Number");
+
+	}
+</script>
+</body>
+</html>

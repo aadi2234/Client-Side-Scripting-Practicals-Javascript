@@ -1,0 +1,38 @@
+<html>
+	
+<script>
+var w;
+function Clickme()
+{
+w=window.open("https://www.google.com/","","width=300,height=200");
+var w1=window.open("","","width=200,height=200")
+//var v=window.open("https://in.yahoo.com/","","width=300,height=200");
+}
+function close()
+{
+window.Close();
+}
+//alert("hello");
+//console.log("Hello i am in console");
+function newdoc()
+{
+w.location.assign("https://www.w3schools.com");
+//w.location.replace("https://www.isro.gov.in/")
+w.focus();
+}
+function Clickme1()
+{
+w.resizeTo(300,500);
+w.focus()
+}
+
+</script>
+
+<form>
+<br><br>
+<br><input type="button"name="OK"value="OK" onclick="Clickme()"></button>
+<input type="button"name="resize"value="resize1" onclick="Clickme1()"></button>
+<input type="button"name="close"value="Close" onclick="Close()"></button>
+<input type="button"name="Assign1"value="NewAssign" onclick="newdoc()"></button>
+</form>
+</html>

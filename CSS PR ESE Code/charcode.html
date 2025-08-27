@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character to Unicode Conversion</title>
+</head>
+<body>
+
+<script>
+    // Function to convert character to Unicode
+    function charToUnicode(character) {
+        return character.charCodeAt(0).toString(16).toUpperCase();
+    }
+
+    // Function to convert Unicode to character
+    function unicodeToChar(unicode) {
+        return String.fromCharCode(parseInt(unicode, 16));
+    }
+
+    // Example usage with alert:
+    const inputChar = 'A';
+    const unicodeValue = charToUnicode(inputChar);
+    alert(`Unicode value of '${inputChar}': U+${unicodeValue}`);
+
+    const inputUnicode = '0041'; // Example Unicode value for 'A'
+    const charValue = unicodeToChar(inputUnicode);
+    alert(`Character for Unicode value U+${inputUnicode}: ${charValue}`);
+</script>
+
+</body>
+</html>

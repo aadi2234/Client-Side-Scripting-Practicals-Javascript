@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Properties</title>
+</head>
+<body>
+
+<script>
+    // Function to display all properties of the window object in an alert box
+    function displayWindowProperties() {
+        let properties = "";
+        for (let property in window) {
+            if (window.hasOwnProperty(property)) {
+                properties += property + ': ' + window[property] + '\n';
+            }
+        }
+        alert(properties);
+    }
+
+    // Call the function when the page loads
+    displayWindowProperties();
+</script>
+
+</body>
+</html>

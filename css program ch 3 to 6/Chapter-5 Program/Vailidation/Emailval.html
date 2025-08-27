@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>E-mail Validation </title>
+</head>
+<script>
+function myemail()
+{
+var a=document.myform.email.value;
+if(a.indexOf('@')<=0){
+document.getElementById("Message").innerHTML="**Invaild '@'Position";
+return false;
+}
+if((a.charAt(a.length-4)!='.') && (a.charAt(a.length-3)!='.'))
+{
+document.getElementById("Message").innerHTML="**Invaild '.'Position";
+return false;
+}
+}
+</script>
+<body>
+<form name="myform" onsubmit="return myemail()">
+E-mail:<input type=text value=""name="email">
+<Span id="Message"> </span>
+<br><input type="Submit" Value="Submit" Onclick="myemail()">
+
+
+</body>
+
+</html>

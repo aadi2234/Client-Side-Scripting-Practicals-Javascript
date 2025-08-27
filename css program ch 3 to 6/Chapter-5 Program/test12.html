@@ -1,0 +1,22 @@
+<html>
+<input type="button"Name="btn1" Value="Try me"Onclick="RegExpression()">
+<h1 id="Demo"></h1>
+
+<script>
+function RegExpression() 
+{
+var name="Welcome to Nashik city";
+re = /[city]/gi;
+res=re.exec(name);
+document.getElementById("Demo").innerHTML=res;
+//console.log(res);
+/*if(re.test(name))
+{	alert('Found')		
+}
+else
+{	alert('Not Found')	
+}
+}*/
+}
+</script>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function myfun()
+{
+var a=document.getElementById("mob").value;
+if(a=="")
+{
+ document.getElementById("Message").innerHTML="**Fill the Mobile Number";
+ return false;
+}
+if(isNaN(a))
+{
+ document.getElementById("Message").innerHTML="**Mobile Must Numric Only";
+ return false;
+}
+if(a.length<10)
+{
+ document.getElementById("Message").innerHTML="**Mobile Must be 10 Digit Number";
+ return false;
+}
+if(a.length>10)
+{
+ document.getElementById("Message").innerHTML="**Mobile Must be 10 Digit Number";
+ return false;
+}
+
+if((a.charAt(0)!=9) && (a.charAt(0)!=8) && (a.charAt(0)!=7))
+{
+ document.getElementById("Message").innerHTML="**Mobile Must start with 9,7,8 Only";
+ return false;
+}
+}
+</script>
+
+<form onsubmit="return myfun()">
+Phone  number<input type="text" name="phone" id="mob" value="">
+<span id="Message"> </span><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

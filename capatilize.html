@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check First Letter Capitalization</title>
+</head>
+<body>
+    <h1>Check if the First Letter is Capitalized</h1>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="checkCapitalization()">Check</button>
+
+    <script>
+        function checkCapitalization() {
+            const inputString = document.getElementById("inputString").value;
+            const regex = /^[A-Z]/; // Regular expression to match a capitalized letter at the beginning
+
+            if (regex.test(inputString)) {
+                alert("The first letter is capitalized.");
+            } else {
+                alert("The first letter is not capitalized.");
+            }
+        }
+    </script>
+</body>
+</html>
+1

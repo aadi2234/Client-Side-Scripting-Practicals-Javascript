@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to do a global search for numbers that are NOT 1 to 4 in a string.</p>
+<input type="button" value="test" onclick="myFunction()"></button> 
+
+<p id="demo"></p>
+
+<script>
+
+function myFunction() {
+
+  var str = "welcome to my first REG.Exp.0132";
+  var patt1 = /[a-eA-B0-1][\.]/g;
+  var result = str.match(patt1);
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+
+</body>
+</html>

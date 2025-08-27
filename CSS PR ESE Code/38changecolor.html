@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <script>
+        function submitForm() {
+            // Disable and change color for the Name textbox
+            var nameTextbox = document.getElementById('name');
+            nameTextbox.disabled = true;
+            nameTextbox.style.color = 'red';
+
+            // Disable and change color for the Middle Name textbox
+            var middleNameTextbox = document.getElementById('middleName');
+            middleNameTextbox.disabled = true;
+            middleNameTextbox.style.color = 'red';
+
+            // Disable and change color for the Surname textbox
+            var surnameTextbox = document.getElementById('surname');
+            surnameTextbox.disabled = true;
+            surnameTextbox.style.color = 'red';
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <br>
+
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" placeholder="Enter your middle name">
+
+        <br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" placeholder="Enter your surname">
+
+        <br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</body>
+</html>

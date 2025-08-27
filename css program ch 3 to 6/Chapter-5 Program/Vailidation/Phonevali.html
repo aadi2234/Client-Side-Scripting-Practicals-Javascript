@@ -1,0 +1,51 @@
+<!--Phone Validation 
+1)Number not be Blank
+2)Max length
+3)Min Length
+4)Only Numeric 
+5)7/8/9-->
+
+<html>
+<head>
+<title>Phone Validation</title>
+<script>
+function myfun()
+{
+var a=document.getElementById("mob").value
+if(a=="")
+{
+document.getElementById("message").innerHTML="**Fill the Mobile Number";
+return false;
+}
+if(isNaN(a))
+{
+document.getElementById("message").innerHTML="**Mobile must Number only";
+return false;
+}
+if(a.length<10)
+{
+document.getElementById("message").innerHTML="**Mobile must 10 digits Number only";
+return false;
+}
+if(a.length>10)
+{
+document.getElementById("message").innerHTML="**Mobile must 10 digits Number only";
+return false;
+}
+if((a.charAt(0)!=9) && (a.charAt(0)!=8)&&(a.charAt(0)!=7))
+{
+document.getElementById("message").innerHTML="**Mobile must Start 9,8,7 only";
+return false;
+}
+}
+</script>
+
+
+<form onsubmit="return myfun()">
+Enter Phone Number<input type="text"name="phone"id="mob" Value="">
+
+<span id="message"></span>
+<br><input type="submit" value="Submit"onclick="myfun()">
+</form>
+</head>
+</html>

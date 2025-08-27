@@ -1,0 +1,32 @@
+<!--Multiple action with Onmouseover Event-->
+<html>
+<head>
+<title>Rollover</title>
+</head>
+<script>
+function disp1()
+{
+document.cover.src="apples.gif";
+document.getElementById("para").innerHTML="Apple Fruit";
+}
+function disp2()
+{
+document.cover.src="redstar.gif";
+document.getElementById("para").innerHTML="redstar Fruit";
+}
+
+</script>
+<body>
+
+<h1>Multiple action rollover</h1>
+<a onmouseover="disp1()">
+<h2> Apple </h2></a>
+
+<a onmouseover="disp2()">
+<h2> redstar</h2></a>
+
+<a><img height="92"src="apples.gif"width="70"border="0"name="cover"></a>
+<p id="para">This is multiple action Rollover</p>
+</body>
+
+</html>

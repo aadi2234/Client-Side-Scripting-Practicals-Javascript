@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<p>The exec() method returns the matched text if it finds a match, otherwise it returns null.</p>
+<p>Click the button to search a string for the character "e".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "The best things in life are free";
+  var patt = new RegExp("life1");
+  var res = patt.test(str);
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+</body>
+</html>

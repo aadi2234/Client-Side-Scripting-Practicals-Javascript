@@ -1,0 +1,30 @@
+<!--Slide Show of  Banner images -->
+<html>
+<head>
+<script>
+barr=new Array('Banner1.jpg','Banner2.jpg','Banner3.jpg')
+cnt=0
+document.write(barr.length)
+function disp(num)
+{
+	cnt=cnt+num;
+	if(cnt>barr.length-1)
+	{
+		cnt=0;
+	}
+	if(cnt<0)
+	{
+		cnt=barr.length-1
+	}
+	document.slide.src=barr[cnt];
+}
+</script>
+</head>
+<body>
+<img src="Banner1.jpg" width=100% height=250 name="slide">
+<br>
+<br>
+<input type=button value="Previous" onclick=disp(-1)>
+<input type=button value="Next" onclick=disp(1)>
+</body>
+</html>

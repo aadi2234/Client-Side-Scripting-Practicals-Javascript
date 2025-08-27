@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #myWindow {
+      width: 300px;
+      height: 200px;
+      background-color: grey;
+      position: absolute;
+      top: 150px;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label for="width">Width:</label>
+    <input type="number" id="width" name="width">
+    <br>
+    <label for="height">Height:</label>
+    <input type="number" id="height" name="height">
+    <br>
+    <button type="button" onclick="createWindow()">Create Window</button>
+    <button type="button" onclick="moveWindow()">Move Window</button>
+    <button type="button" onclick="resizeWindow()">Resize Window</button>
+  </form>
+
+  <div id="myWindow">Window</div>
+
+  <script>
+    function createWindow() {
+      const width = document.getElementById("width").value + "px";
+      const height = document.getElementById("height").value + "px";
+      const windowElement = document.getElementById("myWindow");
+      windowElement.style.width = width;
+      windowElement.style.height = height;
+    }
+
+    function moveWindow() {
+      const top = prompt("Enter top position (in pixels):");
+      const left = prompt("Enter left position (in pixels):");
+      const windowElement = document.getElementById("myWindow");
+      windowElement.style.top = top + "px";
+      windowElement.style.left = left + "px";
+    }
+
+    function resizeWindow() {
+      const width = prompt("Enter new width (in pixels):");
+      const height = prompt("Enter new height (in pixels):");
+      const windowElement = document.getElementById("myWindow");
+      windowElement.style.width = width + "px";
+      windowElement.style.height = height + "px";
+    }
+  </script>
+</body>
+</html>

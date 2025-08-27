@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+barr=new Array('Banner1.jpg','Banner2.jpg','Banner3.jpg')
+cnt=0
+function disp()
+{
+	if(document.images)
+	{
+		cnt++
+		if(cnt==barr.length)
+		{
+			cnt=0;
+		}
+	document.changeB.src=barr[cnt]
+	setTimeout("disp()",5000)
+	}
+}
+</script>
+</head>
+<body onload=disp()>
+<center>
+<img src="Banner1.jpg" width=100% height=250 name=changeB>
+</center>
+</body>
+</html>

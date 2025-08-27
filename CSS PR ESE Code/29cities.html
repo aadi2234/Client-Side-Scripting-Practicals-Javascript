@@ -1,0 +1,52 @@
+<html>
+  <title>CSS PR ESE</title>
+</head>
+<body>
+
+  <h2>Select a City:</h2>
+  <select id="cityDropdown" onchange="displayCityInfo()">
+    <option value="selectop">---------</option>
+    <option value="delhi">Delhi</option>
+    <option value="mumbai">Mumbai</option>
+    <option value="bangalore">Bangalore</option>
+  </select>
+
+  <div id="cityInfo">
+    <h3 id="cityName"></h3>
+    <p id="cityDescription"></p>
+    <img id="cityImage" width="200" height="150">
+  </div>
+
+  <script>
+    function displayCityInfo() {
+      var cityDropdown = document.getElementById("cityDropdown");
+      var selectedCity = cityDropdown.value;
+
+      var cityNameElement = document.getElementById("cityName");
+      var cityDescriptionElement = document.getElementById("cityDescription");
+      var cityImageElement = document.getElementById("cityImage");
+
+      switch (selectedCity) {
+        case "delhi":
+          cityNameElement.innerText = "Delhi";
+          cityDescriptionElement.innerText = "Capital city of India.";
+          cityImageElement.src = "delhi.jpg";
+          break;
+        case "mumbai":
+          cityNameElement.innerText = "Mumbai";
+          cityDescriptionElement.innerText = "Financial capital of India.";
+          cityImageElement.src = "mumbai.jpg";
+          break;
+        case "bangalore":
+          cityNameElement.innerText = "Bangalore";
+          cityDescriptionElement.innerText = "Silicon Valley of India.";
+          cityImageElement.src = "banglore.jpg";
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+
+</body>
+</html>

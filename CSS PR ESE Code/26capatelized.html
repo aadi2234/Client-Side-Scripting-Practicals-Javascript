@@ -1,0 +1,27 @@
+<html>
+<head>
+ <style>
+ p {
+   text-transform: uppercase;
+ }
+ </style>
+</head>
+<body>
+ <label>Enter Your Name: <input type="text" id="name" name="name"></label>
+ <script>
+ function fun() {
+   var fullName = document.getElementById("name").value;
+   const splitOnSpace = fullName.split(' ');
+   console.log(splitOnSpace);
+   var first = splitOnSpace[0].toUpperCase(); 
+   var middle = splitOnSpace[1].toUpperCase();
+   var last = splitOnSpace[2].toUpperCase();
+
+   document.write("First Name: " + first + "<br>");
+   document.write("Middle Name: " + middle + "<br>");
+   document.write("Last Name: " + last);
+ }
+ </script>
+ <button onclick="fun()">Try me</button>
+</body>
+</html>

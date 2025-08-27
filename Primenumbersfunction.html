@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Pract 4.2</title>
+</head>
+<body>
+<label>Prime Numbers between 1 to 100<br></label>
+<button onclick="prime()">Generate</button>
+<script type="text/javascript">
+	function prime()
+	{
+		document.write("Prime Numbers between 1 to 100"+"<br>");
+		var count=0;
+		for (var i =1; i <= 100; i++) 
+		{
+			count=0;
+			for (var j =1; j <= i; j++) 
+			{
+				if (i%j==0) 
+				{
+					count=count+1;
+				}
+			}
+			if(count==2)
+			{
+				document.write(i+"<br>");
+			}
+		}
+	}
+</script>
+</body>
+</html>

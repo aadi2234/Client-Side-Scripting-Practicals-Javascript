@@ -1,0 +1,21 @@
+<html>
+<head>
+	<h1>OnBlur Event</h1>
+</head>
+<body>
+	<script type="text/javascript">
+		function add_nums()
+		{
+			var a=parseInt(document.getElementById("t1").value);
+			var b=parseInt(document.getElementById("t2").value);
+			document.getElementById("pt").innerHTML="Addition of "+a+" & "+b+ " is "+(Number(a)+Number(b));
+		}
+	</script>
+	<form>
+	First Number    <input type="text" id="t1" name="fno" size= "50"/><br>
+	Second Number   <input type="text" id="t2" name="sno" size= "50"/><br>
+	<p id="pt"></p><br><br>
+	<input type="button" style="width: 150px; height: 50px;" onfocus="add_nums()" value="Addition"/>
+	</form>
+</body>
+</html>

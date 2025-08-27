@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<p>The test() method returns true if it finds a match, otherwise it returns false.</p>
+<p>Click the button to search a string for the character "e".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "The best things in life are free best";
+  //var patt = new RegExp("best");
+    var patt=/[z.p]/g;
+  var res = patt.test(str);
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+</body>
+</html>

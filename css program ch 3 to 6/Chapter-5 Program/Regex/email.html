@@ -1,0 +1,27 @@
+<html>
+<head><title> PROGRAM TO VALIDATE E-MAIL</title>
+<script language="javascript">
+
+function valid_email()
+{
+  str=form1.str.value
+  var mailformat =/ ^\w +([\.-]?\w +)*@\w+([\.-]?\w+)*(\.\w{2,3})+$ /;
+  if(mailformat.test(str))
+  {
+   alert("Valid email address!");
+  }
+  else
+  {
+   alert("You have entered an invalid email address!");
+  }
+}
+</script>
+</head>
+<body>
+	PROGRAM TO PROGRAM TO VALIDATE E-MAIL
+	<form name="form1">
+	Enter an Email-ID :<input type="text" name="str">
+	<input type="button" value="Check" onclick="valid_email()">
+	</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Practical 6.2</title>
+		<script type = "text/javascript">
+			function order(){
+				alert("Order Placed");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Pizza Order</h1>
+		<form name = "form1" method = "GET">
+			<label>Pizza Name: </label>
+			<input type = "text" name = "name"><br><br>
+			<label>Extra Cheese : </label>
+            <input type="radio" name="yes" value="yes">Yes
+            <input type="radio" name="no" value="no" >No
+			<pre>Rs. 50 Additional for extra cheese</pre>
+			<br>
+			<label>Size: </label>
+			<select name = "size" id = "size">
+				<option value = "small">small = Rs. 149</option>
+				<option value = "med">Medium = Rs. 229</option>
+				<option value = "large">Large = Rs. 349</option>
+			</select><br><br>
+			<label>Phone : </label>
+			<input type = "text" name = "phone"><br><br>
+			<input type = "submit" onclick="order()" value = "Place Order">
+
+		</form>
+	</body>
+</html>

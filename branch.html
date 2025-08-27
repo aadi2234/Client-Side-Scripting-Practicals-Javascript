@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>DropDown List</title>
+</head>
+<body>
+    <form>
+        <label for="branch">Branches:-</label>
+        <select id="branch" name="Branch">
+            <option value="CM">CM</option>
+            <option value="IF">IF</option>
+            <option value="EJ">EJ</option>
+            <option value="ME">ME</option>
+            <option value="EE">EE</option>
+            <option value="CE">CE</option>
+        </select>
+        <input type="button" name="Select" value="Select" onclick="selectBranch()">
+    </form>
+    <script type="text/javascript">
+        function selectBranch() 
+        {
+            const dropdown = document.getElementById('branch');
+            const selectedValue = dropdown.value;
+            alert('Selected Branch: ' + selectedValue);
+        }
+    </script>
+</body>
+</html>

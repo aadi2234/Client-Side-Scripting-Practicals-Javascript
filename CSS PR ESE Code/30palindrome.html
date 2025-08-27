@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>CSS PR ESE</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var str1 = prompt("Enter a String=");
+    var str2 = str1;
+    
+    str1 = str1.toLowerCase();
+    var reversedStr = str1.split('').reverse().join('');
+
+    if (str1 === reversedStr) {
+      alert(str2 + " is a palindrome");
+    } else {
+      alert(str2 + " is not a palindrome");
+    }
+  </script>
+</body>
+</html>

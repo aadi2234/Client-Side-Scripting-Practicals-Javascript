@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pract 8.2</title>
+</head>
+<body>
+    <h2>Keyboard Events</h2>
+    <input type="text" id="input1" 
+        onkeydown="keydownevent()" 
+        onkeypress="keypressevent()"
+        onkeyup="keyupevent()" />
+    
+    <script>
+        function keydownevent() {
+            alert("Keydown event: key pressed");
+        }
+        
+        function keypressevent() {
+            alert("Keypress event: key pressed and generated a character");
+        }
+        
+        function keyupevent() {
+            alert("Keyup event: key released");
+        }
+    </script>
+</body>
+</html>

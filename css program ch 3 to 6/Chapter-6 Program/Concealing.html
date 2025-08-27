@@ -1,0 +1,10 @@
+<html>
+<a id="contact-link" href="#" data-secret="aGVsbG9AbXlkb21haW4uY29t">[Javascript required]</a>...
+<script>
+window.onload = function()
+{
+var contact = document.getElementById("contact-link");  contact.textContent = atob(contact.dataset.secret);
+contact.href = atob("bWFpbHRvOg==") + atob(contact.dataset.secret);
+};
+</script>
+</html>

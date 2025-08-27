@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Session Cookie Example</title>
+</head>
+<body>
+  <button onclick="setSessionCookie()">Set Cookie</button>
+  <button onclick="displayCookieContent()">Display Cookie Content</button>
+  <p id="cookieContent"></p>
+
+  <script>
+    // Function to set a session cookie
+    function setSessionCookie() {
+      document.cookie = "mySessionCookie=Hello, Cookie; path=/";
+    }
+
+    // Function to display the content of the session cookie
+    function displayCookieContent() {
+      const cookies = document.cookie.split('; ');
+      const cookieValue = cookies.find(cookie => cookie.startsWith("mySessionCookie="));
+
+      if (cookieValue) {
+        document.getElementById("cookieContent").textContent = "Content of the session cookie: " + cookieValue.split('=')[1];
+      } else {
+        document.getElementById("cookieContent").textContent = "Session cookie not found.";
+      }
+    }
+  </script>
+</body>
+</html>

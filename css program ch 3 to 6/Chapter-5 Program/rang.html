@@ -1,0 +1,27 @@
+<html>
+<head><title> PROGRAM TO VALIDATE E-MAIL</title>
+<script language="javascript">
+
+function valid_email()
+{
+  str=form1.str.value;
+  var Numberrange =/[a-z]/;
+  if(Numberrange.test(str))
+  {
+   alert("Accept !");
+  }
+  else
+  {
+   alert("You have entered an Valid rage!");
+  }
+}
+</script>
+</head>
+<body>
+	PROGRAM TO PROGRAM TO VALIDATE E-MAIL
+	<form name="form1">
+	Enter an String:<input type="text" name="str">
+	<input type="button" value="Check" onclick="valid_email()">
+	</form>
+</body>
+</html>

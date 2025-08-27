@@ -1,0 +1,20 @@
+<!--Write a JavaScript program to find the area of a triangle where lengths of the
+three of its sides are 5, 6, 7.-->
+<html>
+<head>
+<title>Area of Traingle</title>
+</head>
+<body>
+<script type="text/javascript">
+	let s1=5,s2=6,s3=7;
+	let semi=(s1+s2+s3)/2;
+	let area=Math.sqrt(
+		semi*
+		(semi-s1)*
+		(semi-s2)*
+		(semi-s3));
+	document.write("Sides of Triangle="+s1+","+s2+","+s3+"<br>");
+	document.write("Area of Triangle="+area+"<br>");
+</script>
+</body>
+</html>

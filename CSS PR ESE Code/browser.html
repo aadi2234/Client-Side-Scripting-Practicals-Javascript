@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Identification</title>
+  <script>
+    function identifyBrowser() {
+      const userAgent = navigator.userAgent;
+      let browserInfo;
+
+      if (userAgent.includes("Chrome")) {
+        browserInfo = "Google Chrome";
+      } else if (userAgent.includes("Firefox")) {
+        browserInfo = "Mozilla Firefox";
+      } else if (userAgent.includes("Safari")) {
+        browserInfo = "Apple Safari";
+      } else if (userAgent.includes("Edge")) {
+        browserInfo = "Microsoft Edge";
+      } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+        browserInfo = "Opera";
+      } else if (userAgent.includes("MSIE") || userAgent.includes("Trident/")) {
+        browserInfo = "Internet Explorer";
+      } else {
+        browserInfo = "Unknown Browser";
+      }
+
+      document.getElementById("browserInfo").innerText = `You are using: ${browserInfo}`;
+    }
+  </script>
+</head>
+<body>
+
+<h1>Browser Identification</h1>
+<p id="browserInfo"></p>
+
+<script>
+  // Call the function to identify the browser when the page loads
+  identifyBrowser();
+</script>
+
+</body>
+</html>

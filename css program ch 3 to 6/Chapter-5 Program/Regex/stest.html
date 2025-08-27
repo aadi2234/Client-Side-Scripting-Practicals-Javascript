@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Reg exp</title>
+</head>
+<button name="bt1" onclick="f1()">Click me</button>
+<h1 id="demo">
+<script>
+function f1()
+{
+var str="\nhi hi bye bye bye Hello Hi";
+var pattern=/bye/;
+var s1=str.match(pattern);
+document.getElementById("demo").innerHTML=s1;
+console.log(s1);
+}
+</script>
+</html>

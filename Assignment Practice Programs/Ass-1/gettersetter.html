@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Getter and Setter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var car={
+			brand:"Toyota",
+			color:"Black",
+
+			get getBrand()
+			{
+				return this.brand;
+			},
+			get getColor()
+			{
+				return this.color;
+			},
+			set setBrand(newBrand)
+			{
+				this.setBrand=newBrand;
+			}
+			set setColor(newColor)
+			{
+				this.setColor=newColor;
+			}
+		};
+		document.write(car.brand);
+		document.write(car.color);
+		car.setBrand="Suzuki";
+		car.setColor="white";
+		document.write(car.brand);
+		document.write(car.color);
+	</script>
+
+	</body>
+	</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+  <title>Video</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script defer src="https://unpkg.com/face-api.js@2.0.10"></script>
+</head>
+<style type="text/css">
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  #vid {
+    height: 50%;
+    border: solid 2px black;
+  }
+</style>
+<body>
+  <video id="vid" autoplay> </video>
+  <script>
+    var video = document.getElementById("vid");
+    const options = {
+      video: true
+    }
+    let detectionInterval;
+
+    async function initializeCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia(options);
+        video.srcObject = stream;
+        return stream;
+      } catch (error) {
+        alert("Unable to access the camera");
+        throw error;
+      }
+    }
+
+    async function loadModels() {
+      await faceapi.nets.tinyFaceDetector.loadFromUri('https://unpkg.com/face-api.js@2.0.10/models');
+      await faceapi.nets.faceLandmark68Net.loadFromUri('https://unpkg.com/face-api.js@2.0.10/models');
+      await faceapi.nets.faceRecognitionNet.loadFromUri('https://unpkg.com/face-api.js@2.0.10/models');
+    }
+
+    async function startFaceDetection() {
+      try {
+        const cameraStream = await initializeCamera();
+        await loadModels();
+
+        detectionInterval = setInterval(async () => {
+          const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptors();
+
+          // Check the number of detected faces
+          if (detections.length === 0) {
+            // Perform object detection when no faces are detected
+            await detectObjects();
+          } else {
+            for (let i = 0; i < detections.length; i++) {
+              alert("Face detected");
+            }
+
+            if (detections.length > 1) {
+              clearInterval(detectionInterval);
+              alert("More than one person detected. Session terminated.");
+            }
+          }
+        }, 1000); // Adjust the interval as needed
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    async function detectObjects() {
+      try {
+        const predictions = await cocoSsd.detect(video);
+
+        // Check if any objects other than persons are detected
+        const nonPersonObjects = predictions.filter(prediction => prediction.class !== 'person');
+        if (nonPersonObjects.length > 0) {
+          alert("Non-person object detected. Session terminated.");
+          clearInterval(detectionInterval);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    // Check if the browser supports the necessary APIs for camera access
+    if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+      // Start face detection when the page is loaded
+      startFaceDetection();
+    } else {
+      alert("Your browser doesn't support camera access.");
+    }
+  </script>
+</body>
+</html>

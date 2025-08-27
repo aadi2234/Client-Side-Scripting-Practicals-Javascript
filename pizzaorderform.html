@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza Order Form</title>
+    <style>
+        /* Add some basic CSS styling */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pizza Order Form</h1>
+    <form id="pizzaForm">
+        <label for="pizzaSize">Pizza Size:</label>
+        <select id="pizzaSize" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <label for="toppings">Toppings:</label>
+        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+        <input type="checkbox" id="sausage" name="topping" value="sausage">
+        <label for="sausage">Sausage</label>
+
+        <label for="delivery">Delivery:</label>
+        <input type="radio" id="deliveryYes" name="delivery" value="yes">
+        <label for="deliveryYes">Yes</label>
+        <input type="radio" id="deliveryNo" name="delivery" value="no" checked>
+        <label for="deliveryNo">No</label>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="3" cols="30"></textarea>
+
+        <button type="button" id="orderButton">Place Order</button>
+    </form>
+
+    <p id="orderSummary"></p>
+
+    <script>
+        // Get references to form elements
+        const pizzaForm = document.getElementById('pizzaForm');
+        const pizzaSize = document.getElementById('pizzaSize');
+        const toppings = document.getElementsByName('topping');
+        const deliveryYes = document.getElementById('deliveryYes');
+        const address = document.getElementById('address');
+        const orderButton = document.getElementById('orderButton');
+        const orderSummary = document.getElementById('orderSummary');
+
+        // Handle form submission
+        orderButton.addEventListener('click', function () {
+            // Gather form data
+            const size = pizzaSize.value;
+            const selectedToppings = Array.from(toppings).filter(topping => topping.checked).map(topping => topping.value);
+            const delivery = deliveryYes.checked ? 'Yes' : 'No';
+            const deliveryAddress = address.value;
+
+            // Display order summary
+            const summary = `Order Summary:
+            Size: ${size}
+            Toppings: ${selectedToppings.join(', ')}
+            Delivery: ${delivery}
+            Delivery Address: ${deliveryAddress}`;
+            
+            orderSummary.textContent = summary;
+        });
+    </script>
+</body>
+</html>

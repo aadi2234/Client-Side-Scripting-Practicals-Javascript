@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>CSS PR ESE</title>
+</head>
+<body>
+    <form>
+        <h1 align="center"><b>Student Registration Form<hr></b></h1><br>
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" name="fullname" placeholder="Enter Your Full Name..."><br><br>
+
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="date_of_birth" placeholder="Enter Your BirthDate..."><br><br>
+
+        <label for="emailid">Email ID:</label>
+        <input type="email" id="emailid" name="EmailID" placeholder="Enter Your Email ID..."><br><br>
+
+        <label for="mobno">Mobile Number:</label>
+        <input type="text" id="mobno" name="MobileNo" placeholder="Enter Your Mobile Number..."><br><br>
+
+        <label for="gender">Gender:</label>
+        Male<input type="radio" id="gender" name="grp1" value=1>
+        Female<input type="radio" id="gender" name="grp1" value=1><br><br>
+        
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" placeholder="Enter Your Address..." rows="4" cols="30"></textarea><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="City" placeholder="Enter Your City..."><br><br>
+
+        <label for="pincode">Pin Code:</label>
+        <input type="text" id="pincode" name="PinCode" placeholder="Enter Your Pincode..."><br><br>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="State" placeholder="Enter Your State..."><br><br>
+
+        <label for="branch">Branch Applied For:-</label>
+        <select id="branch" name="Branch">
+            <option value="CM">CM</option>
+            <option value="IF">IF</option>
+            <option value="EJ">EJ</option>
+            <option value="ME">ME</option>
+            <option value="EE">EE</option>
+            <option value="CE">CE</option>
+        </select><br><br>
+        <input type="button" name="Submit" value="Submit" onclick="successful()">
+    </form>
+    <script type="text/javascript">
+        function successful() 
+        {
+            alert("Registration Successful...");
+        }
+    </script>
+</body>
+</html>

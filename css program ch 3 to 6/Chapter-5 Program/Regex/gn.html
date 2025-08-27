@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<p>Click the button to do a global search for "is" in a string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Is this all there is ere?";
+  var patt1 = /er/g;
+   //var result=patt1.global;
+     var result=patt1.ignoreCase
+ // var result = str.match(patt1);
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

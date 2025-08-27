@@ -1,0 +1,45 @@
+<!--Text Validation-->
+<html>
+<head>
+<title>
+Text Validation 
+</title>
+<script>
+function fun1()
+{
+var correct_way=/^[A-Za-z]+$/;
+var a=document.getElementById("Name").value;
+if(a=="")//Emty
+{
+document.getElementById("Message").innerHTML="**Fill the name";
+return false;
+}
+if(a.length<3)//min
+{
+document.getElementById("Message").innerHTML="**Enter the Minimum Length";
+return false;
+}
+if(a.length>20)//max
+{
+document.getElementById("Message").innerHTML="**Enter the Maximum Length";
+return false;
+}
+if(a.match(correct_way))//Alphabets
+{
+true;
+}
+{
+document.getElementById("Message").innerHTML="**Only alphabets Allowed";
+return false;
+}
+}
+</script>
+
+<form name="Myform"onsubmit="return fun1()">
+Name:<input type="Text"id="Name"value="">
+<span id="Message"></Span>
+<br>
+<input type="Submit"value="Submit" onclick="">
+</form>
+</head>
+</html>

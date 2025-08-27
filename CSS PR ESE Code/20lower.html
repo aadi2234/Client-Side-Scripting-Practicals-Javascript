@@ -1,0 +1,21 @@
+<html>
+<head><title>CSS PR ESE</title></head>
+<body>
+	Enter a character:
+	<input type="text" maxlength="1" name="char" oninput="islower(this.value)">
+	<script type="text/javascript">
+		function islower(character)
+		{
+			var lowerregx=/^[a-z]$/
+			if(lowerregx.test(character))
+			{
+				alert(character+" is in LowerCase")
+			}
+			else
+			{
+				alert(character+" is not in LowerCase")
+			}
+		}
+	</script>
+</body>
+</html>

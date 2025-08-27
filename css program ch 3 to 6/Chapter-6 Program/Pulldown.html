@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Pull Down Menu</title>
+<script language="Javascript" type="text/javascript">
+
+function DisplayPage(Choice) 
+{
+	Page = Choice.options[Choice.selectedIndex].value
+	if (Page != "") 
+	{
+		window.location = Page
+	}
+}
+</script>
+</head>
+
+<body onload="document.Form1.MenuChoice.selectedIndex=0">
+<form action="" name="Form1">
+<select name="MenuChoice" onchange="DisplayPage(this)">
+<option>Products</option>
+<option value="computers.html">Computers</option>
+<option value="monitors.html">Monitors</option>
+</select>
+</form>
+</body>
+</html>

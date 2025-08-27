@@ -1,0 +1,34 @@
+<html>
+<head><title>CSS PR ESE</title></head>
+<body>
+	<form>
+		<p>
+			<select id="optionlist">
+				<option value="1">Mango</option>
+				<option value="2">Banana</option>
+				<option value="3">Apple</option>
+			</select>
+			<br>
+			<input type="radio" name="grp1" value="1" checked="true" onclick="updatelist(1)">Fruits
+			<br>
+			<input type="radio" name="grp1" value="2" onclick="updatelist(2)">Vegetables
+			<br>
+			<input type="reset" value="Reset" name="reset">
+		</p>
+	</form>
+	<script>
+		function updatelist(Elementvalue)
+		{
+			const optionlist=document.getElementById("optionlist");
+			if(Elementvalue=="1")
+			{
+				optionlist.innerHTML='<option value="1">Mango</option> <option value="2">Banana</option><option value="3">Apple</option>';
+			}
+			else if(Elementvalue=="2")
+			{
+				optionlist.innerHTML='<option value="1">Potato</option> <option value="2">Cabbage</option><option value="3">Onion</option>';
+			}
+		}
+	</script>
+</body>
+</html>

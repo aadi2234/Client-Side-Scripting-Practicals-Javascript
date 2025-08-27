@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>prg1</title>
+</head>
+<body>
+	<form name="myform">
+	<label><b>Enter 2 numbers</b></label>
+	<br><br>
+	<label>Enter 1st number:- </label><input type="text" name="fnum"><br><br>
+	<label>Enter 2nd number:- </label><input type="text" name="snum"><br><br>
+	
+	<input type="button" name="" value="ADD" onclick="Add()">
+	<input type="button" name="" value="SUB" onclick="Sub()">
+	<input type="button" name="" value="MUL" onclick="Mul()">
+	<input type="button" name="" value="DIV" onclick="Div()">
+	</form>
+	
+	<script type="text/javascript">
+		function Add()
+		{	
+			fnum=parseInt(myform.fnum.value);
+			snum=parseInt(myform.snum.value);
+			result=fnum+snum;
+			myform.result.value=alert("Result="+result);
+		}
+	</script>
+</body>
+</html>

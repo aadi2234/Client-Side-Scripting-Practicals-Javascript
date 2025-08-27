@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pract 7.1</title>
+</head>
+<body>
+
+<h1>OnBlur Event</h1>
+
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" onblur="validateName()">
+</form>
+
+<p id="message"></p>
+
+<script>
+    function validateName() {
+        var nameInput = document.getElementById("name");
+        var message = document.getElementById("message");
+
+        if (nameInput.value === "") {
+            message.innerHTML = "Name is required.";
+        } else {
+            message.innerHTML = ""; // Clear any previous error message
+        }
+    }
+</script>
+
+</body>
+</html>

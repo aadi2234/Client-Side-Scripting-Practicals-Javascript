@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Scrolling Text</title>
+<script language="JavaScript">  
+var scrollPos=0
+var maxScroll=100  
+var blanks= ""
+function scrollText(text,milliseconds)
+ {  
+ window.setInterval("displayText('"+text+"')",milliseconds)
+}
+
+function displayText(text) 
+{  window.defaultStatus = blanks+text
+++scrollPos blanks += " "
+if(scrollPos>maxScroll)
+{
+scrollPos=0 
+ blanks=""
+}
+}
+</script>
+</head>
+<body onload="scrollText(Text  Moving on Status Bar....!!!',300)">
+<p>Watch the text scroll at the  bottom of this window!</p>
+</body>
+</html>

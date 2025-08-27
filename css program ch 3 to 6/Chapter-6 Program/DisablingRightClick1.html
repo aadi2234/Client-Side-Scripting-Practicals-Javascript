@@ -1,0 +1,18 @@
+<!DOCTYPE HTML> <html>
+<body style = "text-align:center;">
+<h1 style = "color:green;" > JavaScript</h1>
+<p id = "GFG_UP" style = "font-size: 16px; font-weight: bold;"></p>
+<button onclick = "Run()"> Disable </button>
+<p id = "GFG_DOWN" style = "color:green; font-size: 20px; font-weight: bold;">
+</p>
+<script>
+var up = document.getElementById("GFG_UP");
+var down = document.getElementById("GFG_DOWN");  
+up.innerHTML = "Click on the button to disable right click"; 
+ function Run()
+{
+document.addEventListener('contextmenu', event =>
+event.preventDefault()); 
+down.innerHTML = "Right click disabled";
+}
+</script> </body> </html>

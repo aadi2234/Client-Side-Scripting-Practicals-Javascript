@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Dynamically Changing Menu Options</title>
+<script language="Javascript" type="text/javascript">
+
+SalesStaff = new Array('Bob Smith','Mark Jones','Sue Rogers')
+MarketingStaff = new Array('Amber Thomas','Joanne Johnson', 'Sandy Russell')
+function GetEmployees(Department) {
+// clear out the current options
+for(i=document.Form1.Employees.options.length-1;i>0; i--)
+{
+document.Form1.Employees.options.remove(i)
+}
+Dept = Department.options[Department.selectedIndex].value
+if (Dept != "") {
+if (Dept == '1'){
+for (i=1; i<=SalesStaff.length;i++) {
+document.Form1.Employees.options[i] =new Option(SalesStaff[i-1])
+}
+}
+if (Dept == '2'){
+for (i=1; i<=MarketingStaff.length;i++) {
+document.Form1.Employees.options[i] =new Option(MarketingStaff[i-1])
+}
+}
+}
+}
+
+</script>
+</head>
+<body onload="document.Form1.DeptList.selectedIndex=0">
+<form action="" name="Form1">
+<select name="DeptList" onchange="GetEmployees(this)">
+<option value="0">Department</option>
+<option value="1">Sales</option>
+<option value="2">Marketing</option>
+</select>
+<select name="Employees">
+<option value="0">Employees</option>
+</select>
+<br>
+<p>
+<input type="submit" value="Submit" />
+<input type="reset" />
+</p>
+</form>
+</body>
+</html>

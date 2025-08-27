@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+function disp1()
+{
+	document.cover.src='apples.gif'
+	document.getElementById("para").innerHTML="Apple Fruit"
+}
+
+function disp2()
+{
+	document.cover.src='redstar.gif'
+	document.getElementById("para").innerHTML="RedStar"
+}
+</script>
+</head>
+<body>
+<h1>Multiple Actions Rollover</h1>
+<a onmouseover=disp1()>
+<h2>Apple</h2></a>
+
+<a onmouseover=disp2()>
+<h2>RedStar</h2></a>
+
+
+
+<a><IMG height="92" src='apples.gif' width="70" border="0" name="cover"></a>
+<p id="para">This is a Multiple Actions RollOver</p>
+
+
+</body>
+</html>

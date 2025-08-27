@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Textbox Example</title>
+      <script>
+         function submitForm() {
+            var name = document.getElementById("name");
+            var middleName = document.getElementById("middleName");
+            var surname = document.getElementById("surname");
+            var submitButton = document.getElementById("submit");
+            name.disabled = true;
+            middleName.disabled = true;
+            surname.disabled = true;
+            name.style.backgroundColor = "red";
+            middleName.style.backgroundColor = "red";
+            surname.style.backgroundColor = "red";
+            document.getElementById("nameLabel").style.color = "red";
+            document.getElementById("middleNameLabel").style.color = "red";
+            document.getElementById("surnameLabel").style.color = "red";
+            submitButton.disabled = true;
+         }
+      </script>
+   </head>
+   <body>
+      <form>
+         <label id="nameLabel">Name:</label>
+         <input type="text" id="name"><br><br>
+         <label id="middleNameLabel">Middle Name:</label>
+         <input type="text" id="middleName"><br><br>
+         <label id="surnameLabel">Surname:</label>
+         <input type="text" id="surname"><br><br>
+         <input type="button" value="Submit" id="submit" onclick="submitForm()">
+      </form>
+   </body>
+</html>

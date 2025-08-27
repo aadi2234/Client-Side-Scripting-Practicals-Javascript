@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>1st Program</title>
+</head>
+<body bgcolor="BLACK">
+<form name="myform">
+	<h1 align="center" style="color:Yellow">Arithmetic Operations!</h1>
+	<hr>
+	<label style="color:RED">Enter 1st Integer:  </label>
+	<input type="text" id="fnum"></input><br><br>
+	<label style="color:RED">Enter 2nd Integer: </label>
+	<input type="text" id="snum"></input>
+	<br>
+	<br>
+	<button onclick="add()">ADD</button>
+	<button onclick="sub()">SUB</button>
+	<button onclick="mul()">MUL</button>
+	<button onclick="div()">DIV</button>
+	<div id="result"></div>
+</form>
+<script type="text/javascript">
+	function add()
+	{
+		fnum=parseInt(myform.fnum.value);
+		snum=parseInt(myform.snum.value);
+		result=fnum+snum;
+		alert("Addition="+result);
+	}
+	function sub()
+	{
+		fnum=parseInt(myform.fnum.value);
+		snum=parseInt(myform.snum.value);
+		result=fnum-snum;
+		alert("Subtraction="+result);
+	
+	}
+	function mul()
+	{
+		fnum=parseInt(myform.fnum.value);
+		snum=parseInt(myform.snum.value);
+		result=fnum*snum;
+		alert("Multiplication="+result);
+	
+	}
+	function div()
+	{
+		fnum=parseInt(myform.fnum.value);
+		snum=parseInt(myform.snum.value);
+		result=fnum/snum;
+		alert("Division="+result);
+	
+	}
+</script>
+</body>
+</html>

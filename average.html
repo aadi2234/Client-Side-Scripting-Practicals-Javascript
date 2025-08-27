@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Average Marks</title>
+</head>
+<body>
+<script type="text/javascript">
+	let sum=0;
+	let avg=0;
+	var sub=parseInt(prompt("Enter how many Subject`s u want to find Average?"));
+	for (var i = 1; i <=sub; ++i) {
+		var mark=parseInt(prompt("Enter Marks of "+sub+" Subjects"));
+		sum=sum+mark;
+	}
+	avg=sum/sub;
+	document.write("Sum="+sum);
+	document.write("<br>"+"Average Marks="+avg);
+</script>
+</body>
+</html>

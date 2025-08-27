@@ -1,0 +1,29 @@
+<html>
+<head><title> TEST THE FIRST CHARACTER OF A STRING IS
+UPPERCASE OR NOT.</title>
+<script language="javascript">
+
+function upper_case()
+{
+str=document.form1.str.value
+regexp = /^[A-Z]/;
+if (regexp.test(str))
+{
+alert("String's first character is uppercase");
+}
+else
+{
+alert("String's first character is not uppercase");
+}
+}
+</script>
+</head>
+<body>
+	TEST THE FIRST CHARACTER OF A STRING IS
+UPPERCASE OR NOT.
+	<form name="form1">
+	Enter a String :<input type="text" name="str">
+	<input type="button" value="Check" onclick="upper_case()">
+	</form>
+</body>
+</html>

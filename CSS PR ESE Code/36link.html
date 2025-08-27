@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rotating Banner Ads</title>
+    <script>
+        var banners = ['Banner1.jpg', 'Banner2.jpg', 'fruits.jpg', 'flowers.jpg'];
+        BannerLink = new Array('google.com/','vpt.edu.in/', 'msbte.org.in/','facebook.com/');
+        currentBanner = 0;
+        NumOfBanners = banners.length;
+
+        function LinkBanner()
+        {
+            document.location.href ="http://www." + BannerLink[currentBanner];
+        }
+
+        function rotateBanner() {
+            currentBanner++;
+            if (currentBanner === NumOfBanners) {
+                currentBanner = 0;
+            }
+            document.images.src = banners[currentBanner];
+        }
+
+        function slideshow(status) {
+            currentBanner += status;
+            if (currentBanner > (NumOfBanners - 1)) {
+                currentBanner = 0;
+            }
+            if (currentBanner < 0) {
+                currentBanner = NumOfBanners - 1;
+            }
+            document.images.src = banners[currentBanner];
+        }
+    </script>
+</head>
+<body onload="rotateBanner()">
+    <center>
+       <a href="javascript: LinkBanner()"> <img src="Banner1.jpg" width="500" name="images">
+        <br><br>
+        <input type="button" value="Next" onclick="slideshow(1)">
+        <input type="button" value="Back" onclick="slideshow(-1)">
+    </center>
+    <script>
+        setInterval(rotateBanner, 3000); 
+    </script>
+</body>
+</html>

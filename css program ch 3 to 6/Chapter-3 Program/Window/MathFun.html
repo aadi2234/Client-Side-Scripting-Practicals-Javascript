@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title> Using math object</title>
+	<script language="javascript">
+ 	function findmax(t1,t2)
+	{    
+		alert("Maximum number is :" + Math.max(t1,t2));   
+	}
+
+	function findmin(t1,t2)
+	{   
+		alert("Minimum number is :" + Math.min(t1,t2));    
+	 }
+
+ 	function squareroot(t1)
+	{  
+		 alert("Square Root of a Number is:"+Math.sqrt(t1));  
+	 }
+
+	function power(t1)
+	{	
+		t2=prompt("Enter power:");
+		alert("Power of " + t1  +"^" + t2 + "=" + Math.pow(t1,t2));
+	}
+ 	</script>
+
+</head>
+<body>
+<input type=button onclick=findmax(10,45) value=Max>
+<br>
+<br>
+<input type=button onclick=findmin(1,50) value=Min>
+<br>
+<br>
+<input type=button onclick=squareroot(64) value=Squareroot>
+<br>
+<br>
+<input type=button onclick=power(3) value=Power>
+</body>
+</html>

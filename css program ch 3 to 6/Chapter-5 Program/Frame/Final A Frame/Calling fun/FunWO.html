@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Functions</title>
+<script language="Javascript" type="text/javascript">
+
+function IncreaseSalary(OldSalary, PercIncrease)
+{
+var NewSalary =OldSalary * (1 + (PercIncrease / 100))
+alert("Your new salary is " + NewSalary)
+}
+</script>
+</head>
+<body>
+<script language="Javascript" type="text/javascript">
+
+var Salary = prompt('Enter old salary.', ' ')
+var Increase =prompt('Enter salary increase as percent.', ' ')
+IncreaseSalary(Salary, Increase)
+
+</script>
+</body>
+</html>

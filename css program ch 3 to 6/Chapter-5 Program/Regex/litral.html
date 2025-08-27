@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<p>Click the button to do a global search for the hexadecimal number 57 (W) in a string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Visit W3Schools. Hello world!"; 
+  var str = '\uD83D\uDC04';
+  console.log(str);
+  var patt1 = /\u0009/gi;
+  var result = str.match(patt1);
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

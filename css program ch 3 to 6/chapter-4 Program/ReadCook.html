@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Read Cookie</title>
+<script language="Javascript" type="text/javascript">
+<!--
+function ReadCookie()
+{
+with (document.CookieReader)
+{
+if (document.cookie == "")
+{
+cookiecontent.value = "No cookies"
+}
+else
+{
+cookiecontent.value =
+document.cookie.split('=')[1]
+}
+}
+}
+-->
+</script>
+</head>
+<body>
+<form name="CookieReader" action="" >
+Cookie: <input type="text" name="cookiecontent" />
+<br>
+<br>
+<INPUT name="Reset"
+value="Get Cookie" type="button" onclick="ReadCookie()"/>
+</FORM>
+</body>
+</html>

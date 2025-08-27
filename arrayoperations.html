@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations Demo</title>
+</head>
+<body>
+    <h1>Array Operations Demo</h1>
+    
+    <script>
+        // Define an array
+        const originalArray = [10, 20, 30, 40, 50];
+
+        // Display original array
+        document.write("<p>Original Array: " + originalArray + "</p>");
+
+        // Push an element to the end
+        originalArray.push(60);
+
+        // Display array after push
+        document.write("<p>Array after push: " + originalArray + "</p>");
+
+        // Pop the last element
+        const poppedElement = originalArray.pop();
+
+        // Display array after pop and the popped element
+        document.write("<p>Array after pop: " + originalArray + "</p>");
+        document.write("<p>Popped Element: " + poppedElement + "</p>");
+
+        // Unshift an element to the beginning
+        originalArray.unshift(5);
+
+        // Display array after unshift
+        document.write("<p>Array after unshift: " + originalArray + "</p>");
+
+        // Shift the first element
+        const shiftedElement = originalArray.shift();
+
+        // Display array after shift and the shifted element
+        document.write("<p>Array after shift: " + originalArray + "</p>");
+        document.write("<p>Shifted Element: " + shiftedElement + "</p>");
+
+        // Splice: Remove elements and insert new ones
+        const splicedArray = originalArray.splice(1, 2, 25, 35);
+
+        // Display array after splice and the spliced elements
+        document.write("<p>Array after splice: " + originalArray + "</p>");
+        document.write("<p>Spliced Elements: " + splicedArray + "</p>");
+
+        // Slice: Extract a portion of the array
+        const slicedArray = originalArray.slice(2, 4);
+
+        // Display sliced array
+        document.write("<p>Sliced Array: " + slicedArray + "</p>");
+
+        // Concatenate arrays
+        const newArray = originalArray.concat([55, 65]);
+
+        // Display concatenated array
+        document.write("<p>Concatenated Array: " + newArray + "</p>");
+
+        // Join array elements into a string
+        const joinedString = originalArray.join(" - ");
+
+        // Display joined string
+        document.write("<p>Joined String: " + joinedString + "</p>");
+
+        // Sort the array
+        newArray.sort();
+
+        // Display sorted array
+        document.write("<p>Sorted Array: " + newArray + "</p>");
+
+        // Reverse the array
+        newArray.reverse();
+
+        // Display reversed array
+        document.write("<p>Reversed Array: " + newArray + "</p>");
+
+        // Find index of an element
+        const index = newArray.indexOf(40);
+
+        // Display index of 40
+        document.write("<p>Index of 40: " + index + "</p>");
+    </script>
+</body>
+</html>

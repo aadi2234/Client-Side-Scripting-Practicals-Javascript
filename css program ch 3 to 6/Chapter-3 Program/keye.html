@@ -1,0 +1,8 @@
+<html>
+<script>
+function checkPhoneKey(key) {
+  return (key >= '0' && key <= '9') || key == '+' || key == '(' || key == ')' || key == '-';
+}
+</script>
+<input onkeydown="return checkPhoneKey(event.key)" placeholder="Phone, please" type="tel">
+</html>

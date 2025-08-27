@@ -1,0 +1,25 @@
+<html>
+<head><title> PROGRAM TO CHECK VALID IP ADDRESS</title>
+<script language="javascript">
+
+function validateIP() 
+{
+ ipaddress=form1.str.value
+ regex=/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+ if (regex.test(ipaddress))
+  {
+    alert("You have entered a valid IP address!")
+  }
+ else
+    alert("You have entered an invalid IP address!")
+}
+</script>
+</head>
+<body>
+	PROGRAM TO CHECK VALID IP ADDRESS
+	<form name="form1">
+	Enter an IP Address :<input type="text" name="str">
+	<input type="button" value="Check" onclick="validateIP()">
+	</form>
+</body>
+</html>

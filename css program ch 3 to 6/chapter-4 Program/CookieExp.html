@@ -1,0 +1,26 @@
+
+<html>
+<head>
+<title>Write Cookie with Expiration Date</title>
+<script language="Javascript" type="text/javascript">
+<!--
+function WriteCookie()
+{
+var expireDate = new Date 
+expireDate.setMonth(expireDate.getMonth()+3)
+with (document.CookieWriter)
+{
+var CustomerName = customer.value
+document.cookie = "CustomerName1="+ CustomerName+";"expires="+expireDate.toGMTString()
+alert("Cookie Written")
+}
+}
+-->
+</script>
+</head>
+<body>
+<form name="CookieWriter" action="" >
+Enter your name: <input type="text" name="customer" onchange="WriteCookie()" />
+</FORM>
+</body>
+</html>

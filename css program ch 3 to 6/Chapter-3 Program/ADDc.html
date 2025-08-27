@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Mouse Event</title>
+</head>
+<h1>Event Handling in Javascript</h1>
+<body>
+<script>
+let a=34,b=10,c;
+function add()
+{
+ a=prompt("Enter the first number");
+ b=prompt("Enter the first number");
+ c=parseInt(a)+parseInt(b);
+  alert("Addition of Two Numbers is:"+c);
+  document.write("Addition of Two Numbers is:"+c);
+}
+function sub()
+{
+ let a=34,b=10,c;
+ c=a-b;
+  alert("subtraction of Two Numbers is:"+c);
+  document.write("Subtraction of Two Numbers is:"+c);
+}
+function msg()
+{
+  document.write("Welcome to all");
+  alert("Welcome to all");
+}
+</script>
+<form>
+<input type="Button" name=b1 onkeyup=add() value="Addition">
+<input type="Button" name=b2 onkeydown=sub() value="Subtraction">
+<input type="submit" name=b3 onfocus=msg() value="Submit">
+</form>
+</body>
+</html>
+
+

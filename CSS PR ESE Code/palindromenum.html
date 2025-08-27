@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Palindrome</title>
+    <script>
+        var s = parseInt(prompt("Enter a number:"));
+        var originalNumber = s; // Save the original number for later comparison
+        let rev = 0;
+       while(s>0)
+       {
+        rev=rev*10+s%10;
+        s=Math.floor(s/10);
+       }
+        
+        alert("Original Number = " + originalNumber);
+        alert("Reversed Number = " + rev);
+        
+        if (originalNumber === rev) {
+            alert("Palindrome Number");
+        } else {
+            alert("Not a Palindrome Number");
+        }
+    </script>
+</head>
+</html>

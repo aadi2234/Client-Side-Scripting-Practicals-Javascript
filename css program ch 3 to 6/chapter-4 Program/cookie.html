@@ -1,0 +1,23 @@
+<html>
+<head><title>Cookies</title></head>
+<script type="text/javascript">  
+function writeCookie()
+{
+if(document.myform.customer.value == "" )
+{
+ alert("Enter name value");
+ }
+ var cookivalue= escape(document.myform.customer.value) + ";";
+ document.cookie="name=" + cookivalue;
+ document.write ("Setting Cookies : " + "name=" + cookivalue );
+}</script>
+
+
+<form name="myform"action="">
+Enter name:<input type =text" name="customer">
+<input type ="button"value="set Cookies"onclick="writeCookie()">
+
+</form>
+
+</form>
+</html>

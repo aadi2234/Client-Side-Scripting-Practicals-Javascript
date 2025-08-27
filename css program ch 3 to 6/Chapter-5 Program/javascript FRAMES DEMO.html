@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)https://info.sice.indiana.edu/~hrosenba/Demo/javascript/6frame.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>javascript FRAMES DEMO</title>
+<link rel="stylesheet" href="./javascript FRAMES DEMO_files/javascript.css" type="text/css">
+</head>
+
+<body bgcolor="#ffffff">
+&nbsp;<br>
+<h3>Multilpe Frames</h3>
+
+<center>
+<h4>frameset Source Code</h4>
+<table class="html" width="500"><tbody><tr><td><i>
+&lt;html&gt; <br>
+&lt;head&gt;<br>
+&lt;title&gt;javascript FRAMES DEMO&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;frameset cols="50%,50%" border=1&gt;<br> 
+&lt;frameset rows="35%,65%" border=1&gt;<br>
+  &lt;frame src="frameX.html" name=X&gt;<br>
+  &lt;frame src="frameY.html" name=Y&gt; <br>
+ &lt;/frameset&gt; <br>
+ &lt;frameset rows="12%,44%,44%" border=1&gt;  <br>
+  &lt;frame src="frameA.html" name="A"&gt; <br>
+  &lt;frame src="frameB.html" name="C"&gt; <br>
+  &lt;frame src="frameC.html" name="B"&gt; <br>
+&lt;/frameset&gt; <br>
+&lt;/frameset&gt; <br>
+&lt;/html&gt; <br>
+</i></td></tr></tbody></table>
+</center>
+<p>
+First create the frameset.  Then create and open the document which will 
+serve as the Menu or Navigation frame....<br>
+</p><center>
+<h4>frame"X" Source Code (Menu or Navigation frame)</h4>
+<table class="html" width="500"><tbody><tr><td><i>
+&lt;html&gt; <br>
+&lt;head&gt;
+&lt;/head&gt;<pre>&lt;body&gt;
+&lt;center&gt;
+&lt;table border="0" cellpadding=3 cellspacing=3&gt;
+&lt;tr&gt;&lt;th&gt; 
+  Dogs: &lt;/th&gt;&lt;/tr&gt; 
+&lt;tr&gt;&lt;td&gt; 
+&lt;a href="fkuvasz.html" target="Y"<em>
+     onClick="parent.frames['A'].location='fkuvasz1.html';
+              parent.frames['B'].location='fkuvasz2.html';
+              parent.frames['C'].location='fkuvasz3.html'"&gt;</em>
+Kuvasz&lt;/A&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;a href="fairdale.html" target="Y"<em>
+ onClick="parent.frames['A'].location='fairdale1.html';
+          parent.frames['B'].location='fairdale2.html';
+          parent.frames['C'].location='fairdale3.html'"&gt;</em>
+Airdales&lt;/A&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;a href="fretriever.html" target="Y"<em>
+ onClick="parent.frames['A'].location='fretriever1.html';
+          parent.frames['B'].location='fretriever2.html';
+          parent.frames['C'].location='fretriever3.html'"&gt;</em>
+Retrievers&lt;/A&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;a href="frameA.html" target="Y"<em>
+ onClick="parent.frames['A'].location='frameA.html';
+          parent.frames['B'].location='frameB.html';
+          parent.frames['C'].location='frameC.html'"&gt;</em>
+Clear Frames&lt;/A&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;</pre>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</i></td></tr></tbody></table>
+</center>
+&nbsp;<br>
+<p>
+Although this JavaScript Code Example seems longer than the others, it is 
+actually a simple script. Each link within the Menu repeats the same 
+syntax:<br></p><pre><b>          &lt;a href="fkuvasz.html" target="Y"
+               onClick="parent.frames['A'].location='fkuvasz1.html';
+                            parent.frames['B'].location='fkuvasz2.html';
+                            parent.frames['C'].location='fkuvasz3.html'"&gt;Kuvasz&lt;/A&gt; 
+</b></pre>
+<p>
+<b>&nbsp;parent</b> is a reference to the parent document, also known as 
+the frameset Document.  <br><b>&nbsp;frames['frameName']</b>defines the 
+particular frame within the frameset.<br>The statement: 
+<b>parent.frames['frameName'].location='newPage.html'</b> tells the 
+browser to change the page location of the indicated frame to a specified 
+new page.  In this example, each "onClick" event handler changes three 
+frames simulaneously (the fourth frame is updated by the a href tag). Any 
+number of similar statements could be combined and connected to a single 
+"onClick" event handler.  
+
+</p><pre>
+
+
+</pre>
+
+ 
+</body></html>
